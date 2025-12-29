@@ -1,0 +1,73 @@
+<Page
+    x:Class="CyreneGUI.Views.About.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cu="using:CyreneCore.Utils"
+    xmlns:gu="using:CyreneGUI.Utils">
+
+    <Grid PointerWheelChanged="Grid_PointerWheelChanged"
+          Background="Transparent">
+        <Canvas x:Name="GalleryCanvas"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                IsHitTestVisible="False"/>
+
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Margin="10,50,0,0"
+              RowSpacing="20"
+              ColumnSpacing="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="{x:Bind gu:AppUtil.GetImage('Cyrene.png')}"
+                   Width="220"
+                   Height="220"
+                   HorizontalAlignment="Right"/>
+
+            <TextBlock Grid.Column="1"
+                       Text="×"
+                       FontSize="80"
+                       FontWeight="ExtraLight"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Visibility="{x:Bind ViewModel.AuthorVisibility}"
+                       Foreground="{ThemeResource SystemControlForegroundBaseMediumBrush}"/>
+
+            <Image Grid.Column="2"
+                   Source="{x:Bind gu:AppUtil.GetImage('Sig.png')}"
+                   Width="350"
+                   Height="350"
+                   HorizontalAlignment="Left"
+                   Visibility="{x:Bind ViewModel.AuthorVisibility}"/>
+
+            <TextBlock Grid.Row="1"
+                       Text="{x:Bind cu:CoreConst.Author}"
+                       FontSize="28"
+                       HorizontalAlignment="Center"
+                       Foreground="#78C2FF"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       Text="×"
+                       FontSize="28"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Visibility="{x:Bind ViewModel.AuthorVisibility}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="2"
+                       Text="PhiLia093"
+                       FontSize="28"
+                       Margin="50,0,0,0"
+                       HorizontalAlignment="Left"
+                       Visibility="{x:Bind ViewModel.AuthorVisibility}"
+                       Foreground="#FFA9B8"/>
+            </Grid>
+    </Grid>
+</Page>

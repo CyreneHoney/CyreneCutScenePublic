@@ -1,0 +1,52 @@
+<Application
+    x:Class="CyreneGUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <FontFamily x:Key="CustomFontFamily">ms-appx:///Assets/zh-cn.ttf#SDK_SC_Web</FontFamily>
+
+            <LinearGradientBrush x:Key="PinkToBlueDarkBrush" MappingMode="Absolute" StartPoint="0,0" EndPoint="400,0">
+                <GradientStop Color="#42A5F5" Offset="0"/>
+                <GradientStop Color="#F06292" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="PinkToBlueBrush" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FFF0EE" Offset="0.0"/>
+                <GradientStop Color="#EEF7F9" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="AcrylicPinkBrush" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#A0FFF3F2" Offset="0.0"/>
+                <GradientStop Color="#A0F5FEFF" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <Color x:Key="SystemAccentColor">#FFC0CB</Color>
+                    <Color x:Key="SystemAccentColorLight1">#FFD4DD</Color>
+                    <Color x:Key="SystemAccentColorLight2">#FFE7EE</Color>
+                    <Color x:Key="SystemAccentColorLight3">#FFF3F6</Color>
+                    <Color x:Key="SystemAccentColorDark1">#FFACB8</Color>
+                    <Color x:Key="SystemAccentColorDark2">#FF99A6</Color>
+                    <Color x:Key="SystemAccentColorDark3">#FF8593</Color>
+                    <StaticResource x:Key="ContentControlThemeFontFamily" ResourceKey="CustomFontFamily" />
+                    <StaticResource x:Key="TextControlDefaultFontFamily" ResourceKey="CustomFontFamily" />
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontFamily" Value="{StaticResource CustomFontFamily}" />
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="FontFamily" Value="{StaticResource CustomFontFamily}" />
+                    </Style>
+                    <Style TargetType="ContentControl">
+                        <Setter Property="FontFamily" Value="{StaticResource CustomFontFamily}" />
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

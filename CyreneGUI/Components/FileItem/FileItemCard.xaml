@@ -1,0 +1,64 @@
+<UserControl
+    x:Class="CyreneGUI.Components.FileItem.FileItemCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cu="using:CyreneCore.Utils"
+    xmlns:gu="using:CyreneGUI.Utils">
+
+    <UserControl.Resources>
+        <Style x:Key="FileItemCardStyle" TargetType="Grid">
+            <Setter Property="Background" Value="{ThemeResource AcrylicPinkBrush}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource CardStrokeColorDefaultBrush}"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Margin" Value="0,4"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Style="{StaticResource FileItemCardStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Spacing="2" VerticalAlignment="Center">
+            <TextBlock Text="{x:Bind ViewModel.FileName, Mode=OneWay}"
+                       FontSize="15"
+                       FontWeight="Medium"
+                       TextTrimming="CharacterEllipsis"/>
+            <TextBlock Text="{x:Bind ViewModel.FilePath, Mode=OneWay}"
+                       FontSize="12"
+                       Opacity="0.6"
+                       TextTrimming="CharacterEllipsis"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="12">
+            <Grid VerticalAlignment="Center">
+                <FontIcon Glyph="&#xE916;"
+                          Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" 
+                          Visibility="{x:Bind gu:AppUtil.IsVisible(ViewModel.State, cu:ProcessState.Pending), Mode=OneWay}"/>
+                <ProgressRing Width="20"
+                              Height="20"
+                              IsActive="True" 
+                              Visibility="{x:Bind gu:AppUtil.IsVisible(ViewModel.State, cu:ProcessState.Processing), Mode=OneWay}"/>
+                <FontIcon Glyph="&#xE73E;"
+                          Foreground="Green" 
+                          Visibility="{x:Bind gu:AppUtil.IsVisible(ViewModel.State, cu:ProcessState.Completed), Mode=OneWay}"/>
+                <FontIcon Glyph="&#xE711;"
+                          Foreground="Red" 
+                          Visibility="{x:Bind gu:AppUtil.IsVisible(ViewModel.State, cu:ProcessState.Failed), Mode=OneWay}">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="{x:Bind ViewModel.ErrorTip, Mode=OneWay}"/>
+                    </ToolTipService.ToolTip>
+                </FontIcon>
+            </Grid>
+
+            <Button Content="&#xE711;"
+                    FontFamily="Segoe Fluent Icons"
+                    Style="{StaticResource SubtleButtonStyle}"
+                    Click="{x:Bind Remove_Click}"
+                    IsEnabled="{x:Bind gu:AppUtil.IsState(ViewModel.ViewModel.State, cu:ProcessState.None), Mode=OneWay}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

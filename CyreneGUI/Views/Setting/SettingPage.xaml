@@ -1,0 +1,195 @@
+<Page
+    x:Class="CyreneGUI.Views.Setting.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="using:CommunityToolkit.WinUI.Controls"
+    xmlns:gu="using:CyreneGUI.Utils">
+    <Page.Resources>
+        <Style TargetType="c:SettingsCard">
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Background" Value="{StaticResource AcrylicPinkBrush}"/>
+        </Style>
+
+        <ControlTemplate x:Key="PathPickerTemplate" TargetType="ContentControl">
+            <Grid ColumnDefinitions="*, Auto">
+                <ContentPresenter VerticalAlignment="Center" Margin="0,0,12,0"/>
+                <ContentControl Content="{TemplateBinding Tag}" 
+                                Grid.Column="1" 
+                                VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+    </Page.Resources>
+
+    <ScrollViewer Padding="30">
+        <StackPanel Spacing="12">
+            <TextBlock Text="{gu:Tr K=ProcessCfg}"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Margin="0,24,0,8"/>
+
+            <c:SettingsCard Header="{gu:Tr K=OutputPath}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+
+                <ContentControl Template="{StaticResource PathPickerTemplate}">
+                    <TextBox Text="{x:Bind ViewModel.OutputPath, Mode=TwoWay}"
+                                Width="400"/>
+                    <ContentControl.Tag>
+                        <Button Content="{gu:Tr K=Browse}"
+                            Width="80"
+                            Click="{x:Bind BrowseOutput_Click}"/>
+                    </ContentControl.Tag>
+                </ContentControl>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=Convert}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+                <ToggleSwitch IsOn="{x:Bind ViewModel.Convert, Mode=TwoWay}"
+                                Toggled="Convert_Toggled"
+                                OnContent="{gu:Tr K=On}"
+                                OffContent="{gu:Tr K=Off}"/>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=MergeAudio}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+                <ToggleSwitch IsOn="{x:Bind ViewModel.MergeAudio, Mode=TwoWay}"
+                                Toggled="MergeAudio_Toggled"
+                                OnContent="{gu:Tr K=On}"
+                                OffContent="{gu:Tr K=Off}"/>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=MergeCaption}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+                <ToggleSwitch IsOn="{x:Bind ViewModel.MergeCaption, Mode=TwoWay}"
+                                Toggled="MergeCaption_Toggled"
+                                OnContent="{gu:Tr K=On}"
+                                OffContent="{gu:Tr K=Off}"/>
+            </c:SettingsCard>
+
+            <TextBlock Text="{gu:Tr K=FileCfg}"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Margin="0,24,0,8"/>
+
+            <c:SettingsCard Header="{gu:Tr K=KeyPath}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+
+                <ContentControl Template="{StaticResource PathPickerTemplate}">
+                    <TextBox Text="{x:Bind ViewModel.KeyPath, Mode=TwoWay}"
+                                Width="400"/>
+                    <ContentControl.Tag>
+                        <Button Content="{gu:Tr K=Browse}"
+                                Width="80"
+                                Click="{x:Bind BrowseKey_Click}"/>
+                    </ContentControl.Tag>
+                </ContentControl>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=FfmpegPath}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+
+                <ContentControl Template="{StaticResource PathPickerTemplate}">
+                    <TextBox Text="{x:Bind ViewModel.FfmpegPath, Mode=TwoWay}"
+                                Width="400"/>
+                    <ContentControl.Tag>
+                        <Button Content="{gu:Tr K=Browse}"
+                                Width="80"
+                                Click="{x:Bind BrowseFfmpeg_Click}"/>
+                    </ContentControl.Tag>
+                </ContentControl>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=ResPath}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+
+                <ContentControl Template="{StaticResource PathPickerTemplate}">
+                    <TextBox Text="{x:Bind ViewModel.ResPath, Mode=TwoWay}"
+                                Width="400"/>
+                    <ContentControl.Tag>
+                        <Button Content="{gu:Tr K=Browse}"
+                            Width="80"
+                            Click="{x:Bind BrowseRes_Click}"/>
+                    </ContentControl.Tag>
+                </ContentControl>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=LogPath}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+
+                <ContentControl Template="{StaticResource PathPickerTemplate}">
+                    <TextBox Text="{x:Bind ViewModel.LogPath, Mode=TwoWay}"
+                                Width="400"/>
+                    <ContentControl.Tag>
+                        <Button Content="{gu:Tr K=Browse}"
+                            Width="80"
+                            Click="{x:Bind BrowseLog_Click}"/>
+                    </ContentControl.Tag>
+                </ContentControl>
+            </c:SettingsCard>
+
+            <TextBlock Text="{gu:Tr K=UICfg}"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Margin="0,24,0,8"/>
+
+            <c:SettingsCard Header="{gu:Tr K=SkipSplash}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+                <ToggleSwitch IsOn="{x:Bind ViewModel.SkipSplash, Mode=TwoWay}"
+                                Toggled="SkipSplash_Toggled"
+                                OnContent="{gu:Tr K=On}"
+                                OffContent="{gu:Tr K=Off}"/>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=BgMusicVolume}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+                <Slider Value="{x:Bind ViewModel.Volume, Mode=TwoWay}"
+                        Minimum="0"
+                        Maximum="100"
+                        StepFrequency="1"
+                        Width="200"
+                        ValueChanged="Volume_ValueChanged"/>
+            </c:SettingsCard>
+
+            <c:SettingsCard Header="{gu:Tr K=Language}">
+                <c:SettingsCard.HeaderIcon>
+                    <ImageIcon Source="{x:Bind gu:AppUtil.GetImage('Option.svg')}"/>
+                </c:SettingsCard.HeaderIcon>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button Content="&#xE72C;"
+                            FontFamily="Segoe Fluent Icons"
+                            Style="{StaticResource AccentButtonStyle}"
+                            Click="{x:Bind Restart_Clicked}"
+                            Visibility="{x:Bind ViewModel.RestartVisibility, Mode=TwoWay}">
+                    </Button>
+
+                    <ComboBox MinWidth="150"
+                              SelectedValuePath="Tag"
+                              SelectedValue="{x:Bind ViewModel.Language}"
+                              SelectionChanged="Language_SelectionChanged">
+                        <ComboBoxItem Content="简体中文" Tag="CHS"/>
+                        <ComboBoxItem Content="English" Tag="EN"/>
+                    </ComboBox>
+                </StackPanel>
+            </c:SettingsCard>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

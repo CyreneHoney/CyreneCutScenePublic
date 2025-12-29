@@ -1,0 +1,33 @@
+<UserControl
+    x:Class="CyreneGUI.Components.Notify.NotifyPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:n="using:CyreneGUI.Components.Notify">
+    <UserControl.Resources>
+        <Style TargetType="InfoBar">
+            <Setter Property="FontFamily" Value="{StaticResource CustomFontFamily}" />
+        </Style>
+    </UserControl.Resources>
+
+    <ItemsControl x:Name="NotifyArea"
+                  ItemsSource="{x:Bind ViewModel.InfoBars, Mode=OneWay}"
+                  Margin="16,56,16,0"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Center"
+                  MaxWidth="600">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="n:NotifyItem">
+                <InfoBar IsOpen="True"
+                         Message="{x:Bind Message}"
+                         Severity="{x:Bind Severity}"
+                         Margin="0,0,0,8"
+                         Opacity="0"
+                         Loaded="InfoBar_Loaded">
+                    <InfoBar.RenderTransform>
+                        <TranslateTransform Y="-100"/>
+                    </InfoBar.RenderTransform>
+                </InfoBar>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</UserControl>

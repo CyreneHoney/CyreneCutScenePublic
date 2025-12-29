@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity Name="CyreneGUI"
+    Publisher="CN=CyreneHoney"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="8b5e5c6d-1a2b-4c3d-8e9f-1234567890ab" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>CyreneCutScene</DisplayName>
+    <PublisherDisplayName>Cyrene2007</PublisherDisplayName>
+    <Logo>Assets\Cyrene.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="CyreneCutScene"
+        Description="Cyrene2007"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Cyrene.png"
+        Square44x44Logo="Assets\Cyrene.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Cyrene.png" />
+        <uap:SplashScreen Image="Assets\Cyrene.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

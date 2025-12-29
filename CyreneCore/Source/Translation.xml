@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<I18N>
+  <Entry>
+    <Key>InitCapDataErr</Key>
+    <Value lang="EN">Failed to init caption data.</Value>
+    <Value lang="CHS">初始化字幕数据失败。</Value>
+  </Entry>
+  <Entry>
+    <Key>SaveCapCacheErr</Key>
+    <Value lang="EN">Failed to save caption cache: {0}</Value>
+    <Value lang="CHS">保存字幕缓存失败: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>LoadCapCacheErr</Key>
+    <Value lang="EN">Failed to load caption cache: {0}</Value>
+    <Value lang="CHS">加载字幕缓存失败: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>LoadCapDataErr</Key>
+    <Value lang="EN">Failed to load caption data: {0}</Value>
+    <Value lang="CHS">加载字幕数据失败: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>FileNotFoundErr</Key>
+    <Value lang="EN">File not found: {0}</Value>
+    <Value lang="CHS">文件未找到: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>DeserializeErr</Key>
+    <Value lang="EN">Failed to deserialize {0}: {1}</Value>
+    <Value lang="CHS">反序列化{0}失败: {1}</Value>
+  </Entry>
+  <Entry>
+    <Key>TextMapLangErr</Key>
+    <Value lang="EN">Unrecognized language: {0}</Value>
+    <Value lang="CHS">无法识别语言: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>GenCapErr</Key>
+    <Value lang="EN">Failed to generate caption {0}: {1}</Value>
+    <Value lang="CHS">生成字幕{0}失败: {1}</Value>
+  </Entry>
+  <Entry>
+    <Key>KeyNotFoundErr</Key>
+    <Value lang="EN">Failed to find key for {0}</Value>
+    <Value lang="CHS">无法找到{0}的VideoKey</Value>
+  </Entry>
+  <Entry>
+    <Key>ClearLog</Key>
+    <Value lang="EN">Clear Log</Value>
+    <Value lang="CHS">清空日志</Value>
+  </Entry>
+  <Entry>
+    <Key>SuccClearLog</Key>
+    <Value lang="EN">Log cleared successfully</Value>
+    <Value lang="CHS">日志清空成功</Value>
+  </Entry>
+  <Entry>
+    <Key>VerifyFailed</Key>
+    <Value lang="EN">Verification failed, please try again</Value>
+    <Value lang="CHS">验证失败，请重试</Value>
+  </Entry>
+  <Entry>
+    <Key>HomePage</Key>
+    <Value lang="EN">Home Page</Value>
+    <Value lang="CHS">首页</Value>
+  </Entry>
+  <Entry>
+    <Key>WorkPage</Key>
+    <Value lang="EN">Work Page</Value>
+    <Value lang="CHS">处理</Value>
+  </Entry>
+  <Entry>
+    <Key>ConsolePage</Key>
+    <Value lang="EN">Console Page</Value>
+    <Value lang="CHS">控制台</Value>
+  </Entry>
+  <Entry>
+    <Key>SettingPage</Key>
+    <Value lang="EN">Setting Page</Value>
+    <Value lang="CHS">设置</Value>
+  </Entry>
+  <Entry>
+    <Key>AboutPage</Key>
+    <Value lang="EN">About Page</Value>
+    <Value lang="CHS">关于</Value>
+  </Entry>
+  <Entry>
+    <Key>WorldPage</Key>
+    <Value lang="EN">Hello World</Value>
+    <Value lang="CHS">你好世界</Value>
+  </Entry>
+  <Entry>
+    <Key>EncryptTip</Key>
+    <Value lang="EN">Encrypted, please enter the key</Value>
+    <Value lang="CHS">已加密，请输入密钥</Value>
+  </Entry>
+  <Entry>
+    <Key>EncryptPwd</Key>
+    <Value lang="EN">Who is my best partner?</Value>
+    <Value lang="CHS">谁是人家最好的伙伴？</Value>
+  </Entry>
+  <Entry>
+    <Key>Confirm</Key>
+    <Value lang="EN">Confirm</Value>
+    <Value lang="CHS">确认</Value>
+  </Entry>
+  <Entry>
+    <Key>Cancel</Key>
+    <Value lang="EN">Cancel</Value>
+    <Value lang="CHS">取消</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessCfg</Key>
+    <Value lang="EN">Process Config</Value>
+    <Value lang="CHS">处理配置</Value>
+  </Entry>
+  <Entry>
+    <Key>OutputPath</Key>
+    <Value lang="EN">Output Path</Value>
+    <Value lang="CHS">输出路径</Value>
+  </Entry>
+  <Entry>
+    <Key>Browse</Key>
+    <Value lang="EN">Browse</Value>
+    <Value lang="CHS">浏览</Value>
+  </Entry>
+  <Entry>
+    <Key>Convert</Key>
+    <Value lang="EN">Convert Format</Value>
+    <Value lang="CHS">转换视频格式</Value>
+  </Entry>
+  <Entry>
+    <Key>MergeAudio</Key>
+    <Value lang="EN">Merge Audio</Value>
+    <Value lang="CHS">合并音频</Value>
+  </Entry>
+  <Entry>
+    <Key>MergeCaption</Key>
+    <Value lang="EN">Merge Caption</Value>
+    <Value lang="CHS">合并字幕</Value>
+  </Entry>
+  <Entry>
+    <Key>FileCfg</Key>
+    <Value lang="EN">File Config</Value>
+    <Value lang="CHS">文件配置</Value>
+  </Entry>
+  <Entry>
+    <Key>KeyPath</Key>
+    <Value lang="EN">Key Path</Value>
+    <Value lang="CHS">密钥路径</Value>
+  </Entry>
+  <Entry>
+    <Key>FfmpegPath</Key>
+    <Value lang="EN">FFmpeg Path</Value>
+    <Value lang="CHS">FFmpeg路径</Value>
+  </Entry>
+  <Entry>
+    <Key>ResPath</Key>
+    <Value lang="EN">Resource Path</Value>
+    <Value lang="CHS">资源路径</Value>
+  </Entry>
+  <Entry>
+    <Key>LogPath</Key>
+    <Value lang="EN">Log Path</Value>
+    <Value lang="CHS">日志路径</Value>
+  </Entry>
+  <Entry>
+    <Key>UICfg</Key>
+    <Value lang="EN">UI Config</Value>
+    <Value lang="CHS">界面配置</Value>
+  </Entry>
+  <Entry>
+    <Key>SkipSplash</Key>
+    <Value lang="EN">Skip Splash</Value>
+    <Value lang="CHS">跳过启动画面</Value>
+  </Entry>
+  <Entry>
+    <Key>BgMusicVolume</Key>
+    <Value lang="EN">Background Music Volume</Value>
+    <Value lang="CHS">背景音乐音量</Value>
+  </Entry>
+  <Entry>
+    <Key>Language</Key>
+    <Value lang="EN">Language</Value>
+    <Value lang="CHS">语言</Value>
+  </Entry>
+  <Entry>
+    <Key>LangErr</Key>
+    <Value lang="EN">Invalid language: {0}</Value>
+    <Value lang="CHS">无效的语言: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>ToLoadLang</Key>
+    <Value lang="EN">Restart to load language</Value>
+    <Value lang="CHS">重启以加载语言</Value>
+  </Entry>
+  <Entry>
+    <Key>On</Key>
+    <Value lang="EN">On</Value>
+    <Value lang="CHS">是</Value>
+  </Entry>
+  <Entry>
+    <Key>Off</Key>
+    <Value lang="EN">Off</Value>
+    <Value lang="CHS">否</Value>
+  </Entry>
+  <Entry>
+    <Key>ChooseFile</Key>
+    <Value lang="EN">File</Value>
+    <Value lang="CHS">选择文件</Value>
+  </Entry>
+  <Entry>
+    <Key>ChooseFolder</Key>
+    <Value lang="EN">Folder</Value>
+    <Value lang="CHS">选择文件夹</Value>
+  </Entry>
+  <Entry>
+    <Key>ClearInputs</Key>
+    <Value lang="EN">Clear</Value>
+    <Value lang="CHS">清空输入文件</Value>
+  </Entry>
+  <Entry>
+    <Key>OpenOutput</Key>
+    <Value lang="EN">Output</Value>
+    <Value lang="CHS">打开输出文件夹</Value>
+  </Entry>
+  <Entry>
+    <Key>StartProcess</Key>
+    <Value lang="EN">Start</Value>
+    <Value lang="CHS">开始处理</Value>
+  </Entry>
+  <Entry>
+    <Key>CancelProcess</Key>
+    <Value lang="EN">Cancel</Value>
+    <Value lang="CHS">取消处理</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessBar</Key>
+    <Value lang="EN">Process {0}</Value>
+    <Value lang="CHS">处理中 {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>AddedInputs</Key>
+    <Value lang="EN">Added input files</Value>
+    <Value lang="CHS">已添加输入文件</Value>
+  </Entry>
+  <Entry>
+    <Key>ClearedInputs</Key>
+    <Value lang="EN">Cleared input files</Value>
+    <Value lang="CHS">已清空输入文件</Value>
+  </Entry>
+  <Entry>
+    <Key>OpenedOutput</Key>
+    <Value lang="EN">Opened output folder</Value>
+    <Value lang="CHS">已打开输出文件夹</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessingItem</Key>
+    <Value lang="EN">[{0}/{1}] Processing {2} ...</Value>
+    <Value lang="CHS">[{0}/{1}] 正在处理 {2} ...</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessedItem</Key>
+    <Value lang="EN">[{0}/{1}] Processed {2}</Value>
+    <Value lang="CHS">[{0}/{1}] 已处理 {2}</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessItemErr</Key>
+    <Value lang="EN">Failed process {0}: {1}</Value>
+    <Value lang="CHS">处理失败 {0}: {1}</Value>
+  </Entry>
+  <Entry>
+    <Key>InitState</Key>
+    <Value lang="EN">Start Init</Value>
+    <Value lang="CHS">开始初始化</Value>
+  </Entry>
+  <Entry>
+    <Key>InitStateErr</Key>
+    <Value lang="EN">Init State Error</Value>
+    <Value lang="CHS">初始化失败</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessState</Key>
+    <Value lang="EN">Start Process Files</Value>
+    <Value lang="CHS">开始处理文件</Value>
+  </Entry>
+  <Entry>
+    <Key>ProcessStateErr</Key>
+    <Value lang="EN">Process State Error: {0}</Value>
+    <Value lang="CHS">处理失败: {0}</Value>
+  </Entry>
+  <Entry>
+    <Key>CancelState</Key>
+    <Value lang="EN">Process Canceled</Value>
+    <Value lang="CHS">处理已取消</Value>
+  </Entry>
+  <Entry>
+    <Key>CompleteState</Key>
+    <Value lang="EN">Process Complete</Value>
+    <Value lang="CHS">处理完成</Value>
+  </Entry>
+</I18N>
