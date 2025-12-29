@@ -1,0 +1,14 @@
+PROPRIETARY LICENSE
+
+Copyright (c) 2025 Cyrene2007
+
+All rights reserved.
+
+The contents of this directory (CyreneGUI), including but not limited to source code, XAML files, assets, and design, are PROPRIETARY and are NOT open source.
+
+You are NOT allowed to:
+1. Copy, modify, or distribute any code or assets from this directory.
+2. Use the UI design or code logic in your own projects.
+3. Create derivative works based on this GUI.
+
+This directory is excluded from the AGPL-3.0 license applied to the rest of the repository.
