@@ -45,9 +45,15 @@ CyreneCutScene [options]
 
 ### 图形化界面
 
+**使用方法**
+
 ```bash
 CyreneCutScene.exe
 ```
+
+**演示视频**
+
+[Demo](https://github.com/user-attachments/assets/11c8cf97-6d4a-4c41-b1d1-29c28b5a3026)
 
 ## 开源协议
 
