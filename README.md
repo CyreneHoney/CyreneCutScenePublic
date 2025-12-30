@@ -2,6 +2,8 @@
 
 CyreneCutScene 用于提取《崩坏：星穹铁道》的过场动画。
 
+[ Switch to English ](README_en.md)
+
 ## 功能特性
 
 **视频提取**: 解密与提取
